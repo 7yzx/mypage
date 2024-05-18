@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>叶子箫的个人主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #ffffff;
+            color: #333;
+            border-bottom: 2px solid #f4f4f4;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .projects, .competitions {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .project, .competition {
+            flex: 1 1 100%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+        .project img, .competition img {
+            max-width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .project, .competition {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .project img, .competition img {
+                margin-right: 0;
+                margin-bottom: 10px;
+                max-width: 100%;
+            }
+        }
+        /* 夜间模式样式 */
+        body.dark-mode {
+            background-color: #333;
+            color: #ffffff;
+        }
+        body.dark-mode .header {
+            background-color: #444;
+            color: #ffffff;
+        }
+        body.dark-mode .project, body.dark-mode .competition {
+            background-color: #444;
+            border-color: #555;
+        }
+        /* 夜间模式开关按钮 */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">夜间模式</button>
+    <div class="container">
+        <div class="header">
+            <h1>叶子箫的个人主页</h1>
+            <!-- <p>邮箱：2020302191964@whu.edu.cn · 手机：15271242980</p> -->
+        </div>
+        <div class="section">
+            <h2>教育背景</h2>
+            <ul>
+                <li>华中科技大学 - 计算机技术 - 硕士 (2024.09-2027)</li>
+                <li>武汉大学 - 电子信息工程 - 本科 (2020.09 - 2024)</li>
+                <!-- <li>绩点：3.63/4.0</li>
+                <li>英语成绩：六级：581</li>
+                <li>荣誉奖项：甲等奖学金（2021-2022），校级三好学生（2021-2022）</li> -->
+            </ul>
+        </div>
+        <!-- 技能 -->
+        <div class="section">
+            <h2>专业技能</h2>
+            <ol>
+                <li>目前，在做单目深度估计和多模态目标跟踪的毕设内容，熟悉pytorch及目前主流的深度估计网络和多模态跟踪网络。同时有paddleseg基础，熟悉人像分割的基本流程和操作。</li>
+                <li>熟练使用Keil开发单片机，如STM32，MSP432，TM4C123等，以及其外设，如I2C，SPI，UART，ADC，GPIO等，对FreeRTOS有一定了解和使用基础。</li>
+                <li>熟悉Python数据处理，掌握使用Numpy做数据处理，Matplotlib工具绘图。</li>
+            </ol>
+        </div>
+        <!-- 项目经历 -->
+        <div class="section">
+            <h2>项目经历</h2>
+            <div class="projects">
+                <div class="project">
+                    <a href="https://github.com/7yzx/EGDTrack" target="_blank">
+                        <img src="./image/2.png" alt="2023全国大学生电子设计大赛">
+                    </a>
+                    <div>
+                        <h3>融合深度信息的多模态目标跟踪 毕业论文(2023.12 - 2024.05)</h3>
+                        <p>本科毕业论文，采用边缘引导的单目深度估计网络EG-BTS，制作一个coco2017RGBD数据集，同时结合DepthTrack测试集，用于融合深度信息的多模态目标跟踪。并且在DepthTrack测试集上取得了很好的效果。
+                        <a href="https://github.com/7yzx/EGDTrack">https://github.com/7yzx/EGDTrack</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="projects">
+                <div class="project">
+                    <a href="https://github.com/7yzx/Aim_Car" target="_blank">
+                        <img src="./image/bg_fengmian.png" alt="实时背景替换和智能抠图程序">
+                    </a>
+                    <div>
+                        <h3>实时背景替换和智能抠图程序 (2023.12 - 2024.03)</h3>
+                        <p>利用飞桨实现的实时背景替换和抠图系统，通过PyQt设计的用户界面进行集成。该系统能够实现对任意背景图片的替换，并允许用户自定义人像大小和位置。
+                        <a href="https://github.com/7yzx/bg_remover">https://github.com/7yzx/bg_remover</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="projects">
+                <div class="project">
+                    <a href="https://github.com/7yzx/Aim_Car" target="_blank">
+                        <img src="./image/1.png" alt="2023全国大学生电子设计大赛">
+                    </a>
+                    <div>
+                        <h3>参加2023全国大学生电子设计大赛 (2022.08 - 2023.08)</h3>
+                        <p>主导搭建智能小车，采用STM32/MPS432为主控，整合蓝牙、灰度传感器、摄像头、电机以及电机驱动等外设模块。担任队长并负责单片机底层驱动及代码编写，编写基于PID算法控制的闭环电机驱动，串口，OLED显示屏等代码；其中的瞄靶小车代码开源于 <a href="https://github.com/7yzx/Aim_Car">https://github.com/7yzx/Aim_Car</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 实习经历 -->
+        <div class="section">
+            <h2>实习经历</h2>
+            <div class="competitions">
+                <div class="competition">
+                    <div>
+                        <h3>小光子（武汉）科技有限公司 (2023.10-2023.12)</h3>
+                        <p>优化二维云台PID控制算法，并在RKNN1126上部署轻量级目标跟踪系统LightTrack，实现实时控制效果。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 竞赛经历 -->
+        <div class="section">
+            <h2>竞赛经历</h2>
+            <div class="project">
+                <img src="/image/5.png" alt="RoboCup世界杯">
+                <div>
+                    <h3>2022RoboCup世界杯中国赛（标准足球机器人组）全国二等奖 (2022.11)</h3>
+                    <h3>2021RoboCup世界杯中国赛（标准足球机器人组）全国一等奖 (2021.11)</h3>
+                    <p>使用基于linux开源的机器人操作系统控制nao人型机器人完成5v5的足球比赛。主要负责使用C++编写前锋及后卫状态机代码逻辑，实现前锋机器人在足球场上单独进攻及配合进攻策略，以及后卫机器人的联合防守策略。</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="/image/4.png" alt="2021中国高校智能机器人创意大赛">
+                <div>
+                    <h3>2021中国高校智能机器人创意大赛（四足机器狗邀请赛）全国二等奖 (2021.08)</h3>
+                    <p>在Gazebo仿真平台中完成对机器狗的运动控制，如起立、行走。负责基于gazebo的仿真平台，采用ROS控制工具及描述关节驱动的URDF文件，编写运动控制功能代码，实现机器狗的站立及关节控制。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const toggleButton = document.querySelector('.dark-mode-toggle');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = '日间模式';
+            } else {
+                toggleButton.textContent = '夜间模式';
+            }
+        }
+    </script>
+</body>
+</html>
