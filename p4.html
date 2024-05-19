@@ -29,6 +29,30 @@
             margin: 0;
             font-size: 2.5em;
         }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
         .projects, .competitions {
             display: flex;
             flex-wrap: wrap;
@@ -94,12 +118,22 @@
 </head>
 <body>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">夜间模式</button>
+    <nav>
+        <ul>
+            <li><a href="#education">教育背景</a></li>
+            <li><a href="#skills">专业技能</a></li>
+            <li><a href="#projects">项目经历</a></li>
+            <li><a href="#internship">实习经历</a></li>
+            <li><a href="#competitions">竞赛经历</a></li>
+            <li><a href="#current">目前学习方向</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <div class="header">
             <h1>叶子箫的个人主页</h1>
             <!-- <p>邮箱：2020302191964@whu.edu.cn · 手机：15271242980</p> -->
         </div>
-        <div class="section">
+        <div class="section" id="education">
             <h2>教育背景</h2>
             <ul>
                 <li>华中科技大学 - 计算机技术 - 硕士 (2024.09-2027)</li>
@@ -110,16 +144,17 @@
             </ul>
         </div>
         <!-- 技能 -->
-        <div class="section">
+        <div class="section" id="skills">
             <h2>专业技能</h2>
             <ol>
-                <li>目前，在做单目深度估计和多模态目标跟踪的毕设内容，熟悉pytorch及目前主流的深度估计网络和多模态跟踪网络。同时有paddleseg基础，熟悉人像分割的基本流程和操作。</li>
+                <li>目前，在做单目深度估计和多模态目标跟踪的毕设内容，熟悉pytorch及目前主流的深度估计网络和多模态跟踪网络。同时有PaddleSeg基础，熟悉人像分割的基本流程和操作。</li>
                 <li>熟练使用Keil开发单片机，如STM32，MSP432，TM4C123等，以及其外设，如I2C，SPI，UART，ADC，GPIO等，对FreeRTOS有一定了解和使用基础。</li>
-                <li>熟悉Python数据处理，掌握使用Numpy做数据处理，Matplotlib工具绘图。</li>
+                <li>常用python编程，掌握PyQt设计UI以及多线程运行；也会使用基础的C语言进行嵌入式开发。</li>
+                <li>目前比较熟悉CV领域，同时仍在不断探索ing。</li>
             </ol>
         </div>
         <!-- 项目经历 -->
-        <div class="section">
+        <div class="section" id="projects">
             <h2>项目经历</h2>
             <div class="projects">
                 <div class="project">
@@ -158,7 +193,7 @@
             </div>
         </div>
         <!-- 实习经历 -->
-        <div class="section">
+        <div class="section" id="internship">
             <h2>实习经历</h2>
             <div class="competitions">
                 <div class="competition">
@@ -170,7 +205,7 @@
             </div>
         </div>
         <!-- 竞赛经历 -->
-        <div class="section">
+        <div class="section" id="competitions">
             <h2>竞赛经历</h2>
             <div class="project">
                 <img src="/image/5.png" alt="RoboCup世界杯">
@@ -187,6 +222,13 @@
                     <p>在Gazebo仿真平台中完成对机器狗的运动控制，如起立、行走。负责基于gazebo的仿真平台，采用ROS控制工具及描述关节驱动的URDF文件，编写运动控制功能代码，实现机器狗的站立及关节控制。</p>
                 </div>
             </div>
+        </div>
+        <!-- 当前研究与项目 -->
+        <div class="section" id="current">
+            <h2>目前学习方向</h2>
+        
+            <ul>2024.5.19 跟着沐神的课学习深入<a href="https://www.bilibili.com/video/BV1K64y1Q7wu/?p=5&spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=817e38a5883c572adf0493fef3135de5">学习深度学习</a></ul>
+        
         </div>
     </div>
     <script>
